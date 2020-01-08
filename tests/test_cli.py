@@ -55,8 +55,8 @@ class TestArgumentParser:
         assert args.public is True
 
 
-@mock.patch('https_server.cli.get_self_signed_certificate')
-@mock.patch('https_server.cli.run_server')
+@mock.patch('httpself.cli.get_self_signed_certificate')
+@mock.patch('httpself.cli.run_server')
 @mock.patch('os.remove')
 class TestHostname:
 
