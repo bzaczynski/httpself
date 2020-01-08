@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "httpself"
+version = "1.0.0"
+description = "HTTP server over SSL/TLS with an automatically generated self-signed certificate"
+license = "MIT"
+authors = ["Bartosz Zaczyński <bartosz.zaczynski@gmail.com>"]
+readme = "README.md"
+repository = "https://github.com/bzaczynski/httpself"
+keywords = ["https", "server", "certificate", "self-signed"]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+pyopenssl = "^19.1.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[tool.poetry.scripts]
+https = 'httpself.cli:run'
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
